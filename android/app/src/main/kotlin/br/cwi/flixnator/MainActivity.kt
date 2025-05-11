@@ -1,4 +1,4 @@
-package com.example.flixnator
+package br.cwi.flixnator
 
 import io.flutter.embedding.android.FlutterActivity
 
