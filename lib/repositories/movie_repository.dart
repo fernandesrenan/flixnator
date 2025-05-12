@@ -48,4 +48,17 @@ class MovieRepository {
 
     return movies;
   }
+
+  Future<List<Movie>> searchMovie(String search) async {
+    final response = await client.get(
+      '/search/movie',
+      queryParameters: {'page': 1, 'query': search},
+    );
+
+    final movies = (response.data['results'] as List)
+        .map((movie) => Movie.fromJson(movie))
+        .toList();
+
+    return movies;
+  }
 }

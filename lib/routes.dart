@@ -1,6 +1,7 @@
 import 'package:flixnator/pages/home_page.dart';
 import 'package:flixnator/pages/initial_page.dart';
 import 'package:flixnator/pages/landing_page.dart';
+import 'package:flixnator/pages/search_page.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
@@ -23,7 +24,7 @@ final router = GoRouter(
         ),
         GoRoute(
           path: '/search',
-          builder: (context, state) => const InitialPage(),
+          builder: (context, state) => const SearchPage(),
         ),
         GoRoute(
           path: '/favorites',
