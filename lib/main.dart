@@ -1,4 +1,4 @@
-import 'package:flixnator/landing_page.dart';
+import 'package:flixnator/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: ThemeData(
         textTheme: GoogleFonts.getTextTheme('Inter').apply(
           bodyColor: Colors.white,
@@ -29,7 +29,7 @@ class MainApp extends StatelessWidget {
           onSurface: Colors.white,
         ),
       ),
-      home: const LandingPage(),
+      routerConfig: router,
     );
   }
 }

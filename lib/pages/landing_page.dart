@@ -1,8 +1,12 @@
 import 'package:flixnator/components/buttons/primary_button.dart';
 import 'package:flixnator/components/buttons/secondary_button.dart';
+import 'package:flixnator/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LandingPage extends StatelessWidget {
+  static const route = '/landing';
+
   const LandingPage({
     super.key,
   });
@@ -49,7 +53,7 @@ class LandingPage extends StatelessWidget {
                 ),
                 PrimaryButton(
                   text: 'Login',
-                  onPressed: () {},
+                  onPressed: () => context.go(HomePage.route),
                 ),
                 SecondaryButton(
                   text: 'Sign Up',

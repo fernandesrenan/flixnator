@@ -7,7 +7,10 @@
         {
             "name": "flixnator",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--dart-define-from-file=env.json"
+            ]
         },
         {
             "name": "flixnator (profile mode)",
