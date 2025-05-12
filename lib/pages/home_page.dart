@@ -1,7 +1,12 @@
+import 'package:flixnator/pages/favorites_page.dart';
+import 'package:flixnator/pages/search_page.dart';
+import 'package:flixnator/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class HomePage extends StatefulWidget {
+  static const route = '/home';
+
   const HomePage({required this.child, required this.index, super.key});
 
   final Widget child;
@@ -13,10 +18,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final tabs = [
-    '/home',
-    '/search',
-    '/favorites',
-    '/config',
+    HomePage.route,
+    SearchPage.route,
+    FavoritesPage.route,
+    SettingsPage.route,
   ];
 
   void changePage(int index) {

@@ -1,14 +1,16 @@
+import 'package:flixnator/pages/favorites_page.dart';
 import 'package:flixnator/pages/home_page.dart';
 import 'package:flixnator/pages/initial_page.dart';
 import 'package:flixnator/pages/landing_page.dart';
 import 'package:flixnator/pages/search_page.dart';
+import 'package:flixnator/pages/settings_page.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
-  initialLocation: '/login',
+  initialLocation: LandingPage.route,
   routes: [
     GoRoute(
-      path: '/login',
+      path: LandingPage.route,
       builder: (context, state) => const LandingPage(),
     ),
     ShellRoute(
@@ -19,20 +21,20 @@ final router = GoRouter(
       },
       routes: [
         GoRoute(
-          path: '/home',
+          path: HomePage.route,
           builder: (context, _) => const InitialPage(),
         ),
         GoRoute(
-          path: '/search',
+          path: SearchPage.route,
           builder: (context, state) => const SearchPage(),
         ),
         GoRoute(
-          path: '/favorites',
-          builder: (context, state) => const InitialPage(),
+          path: FavoritesPage.route,
+          builder: (context, state) => const FavoritesPage(),
         ),
         GoRoute(
-          path: '/config',
-          builder: (context, state) => const InitialPage(),
+          path: SettingsPage.route,
+          builder: (context, state) => const SettingsPage(),
         ),
       ],
     ),

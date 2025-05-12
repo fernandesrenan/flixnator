@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SearchPage extends StatefulWidget {
+  static const route = '/search';
+
   const SearchPage({super.key});
 
   @override
